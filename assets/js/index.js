@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-14 10:41:56
- * @LastEditTime: 2021-10-15 09:16:15
+ * @LastEditTime: 2021-10-15 15:28:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \第四阶段：前后端交互阶段资料新\大事件项目课程资料\day1（1-3小节）\code\assets\js\index.js
@@ -32,7 +32,7 @@ function getUserInfo() {
 }
 
 function renderAvatar(user) {
-    var name = user.nicname || user.username
+    var name = user.nickname || user.username
     $('#welcome').html('欢迎&nbsp&nbsp' + name)
     if (user.user_pic !== null) {
         $('.layui-nav-img').attr('src', 'user.user_pic').show()
