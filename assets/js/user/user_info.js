@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-15 14:50:28
- * @LastEditTime: 2021-10-15 15:36:32
+ * @LastEditTime: 2021-10-17 14:26:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \第四阶段：前后端交互阶段资料新\大事件项目课程资料\day1（1-3小节）\code\assets\js\user\user_info.js
@@ -29,8 +29,7 @@ $(function() {
                 if (res.status !== 0) {
                     return layer.msg('获取用户信息失败！')
                 }
-                console.log(res)
-                    // 调用 form.val() 快速为表单赋值
+                // 调用 form.val() 快速为表单赋值
                 form.val('formUserInfo', res.data)
             }
         })

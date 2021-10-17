@@ -1,7 +1,7 @@
 /*
  * @Author: your name
- * @Date: 2021-10-15 16:11:45
- * @LastEditTime: 2021-10-15 16:40:00
+ * @Date: 2021-10-15 19:49:36
+ * @LastEditTime: 2021-10-17 14:26:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \第四阶段：前后端交互阶段资料新\大事件项目课程资料\day1（1-3小节）\code\assets\js\user\user_avatar.js
@@ -28,30 +28,18 @@ $(function() {
     })
 
     // 为文件选择框绑定 change 事件
-    /* $('#file').on('change', function(e) {
-      // 获取用户选择的文件
-      var filelist = e.target.files
-      if (filelist.length === 0) {
-        return layer.msg('请选择照片！')
-      }
-
-      // 1. 拿到用户选择的文件
-      var file = e.target.files[0]
-      // 2. 将文件，转化为路径
-      var imgURL = URL.createObjectURL(file)
-      // 3. 重新初始化裁剪区域
-      $image
-        .cropper('destroy') // 销毁旧的裁剪区域
-        .attr('src', imgURL) // 重新设置图片路径
-        .cropper(options) // 重新初始化裁剪区域
-    }) */
     $('#file').on('change', function(e) {
+        // 获取用户选择的文件
         var filelist = e.target.files
         if (filelist.length === 0) {
-            return layer.msg('请选择照片!')
+            return layer.msg('请选择照片！')
         }
+
+        // 1. 拿到用户选择的文件
         var file = e.target.files[0]
+            // 2. 将文件，转化为路径
         var imgURL = URL.createObjectURL(file)
+            // 3. 重新初始化裁剪区域
         $image
             .cropper('destroy') // 销毁旧的裁剪区域
             .attr('src', imgURL) // 重新设置图片路径
